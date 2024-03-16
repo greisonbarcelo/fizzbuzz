@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        fizzbuzz problem
+        1. user enters a number to for condition to end
+        2. user must not enter a number below 1
+        3. function shall show numbers 1 through number user inputs
+        4. function shall display 'fizz' when number pointer is divisible by 3
+        5. function shall display 'buzz' when number pointer is divisible by 5
+        6. function shall display 'fizzbuzz' when both are divisible by 3 and 5
+        */
+        let number = prompt('Enter your desired number', '');
+
+        
+        if(number < 1){
+            alert(`Desired number ${number} is invalid, please enter positive integer!`);
+        } else 
+            startFizzBuzz(number);
+        
+            function startFizzBuzz(number){
+            for (let i = 1; i <= number; i++){
+                if (i % 15 === 0){
+                    console.log('FizzBuzz');
+                }
+                else if (i % 3 === 0){
+                    console.log('Fizz');
+                } 
+                else if (i % 5 === 0){
+                    console.log('Buzz');
+                }
+                else console.log(i);
+            }
+        }
+        
+    </script>
+</body>
+</html>
